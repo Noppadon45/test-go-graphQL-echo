@@ -1,0 +1,21 @@
+type Book {
+  Id: ID!
+  Name: String!
+  Type: BookType
+  Publisher: [Publisher!]!
+}
+
+enum BookType {
+  History
+  Science
+  Math
+}
+
+type Publisher {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  getBooks: [Book!]!
+}
