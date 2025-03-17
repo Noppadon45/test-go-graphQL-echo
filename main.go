@@ -8,7 +8,7 @@ import (
 
 )
 
-const defaultPort = "4000"
+
 
 func main() {
 	e := echo.New()
@@ -26,5 +26,5 @@ func main() {
 		return nil
 	})
 
-	e.Logger.Fatal(e.Start(defaultPort))
+	e.Logger.Fatal(e.Start(":4000"))
 }

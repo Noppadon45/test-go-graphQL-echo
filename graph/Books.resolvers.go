@@ -6,13 +6,13 @@ package graph
 
 import (
 	"context"
-	"fmt"
+	"test-graphQL/graph/handler"
 	"test-graphQL/graph/model"
 )
 
 // GetBooks is the resolver for the getBooks field.
 func (r *queryResolver) GetBooks(ctx context.Context) ([]*model.Book, error) {
-	panic(fmt.Errorf("not implemented: GetBooks - getBooks"))
+	return handler.GetBook(), nil
 }
 
 // Query returns QueryResolver implementation.
