@@ -19,3 +19,12 @@ type Publisher {
 type Query {
   getBooks: [Book!]!
 }
+
+input NewBook {
+  Name: String!
+  Type: BookType
+}
+
+type Mutation {
+  createBook(req: NewBook!): Book!
+}

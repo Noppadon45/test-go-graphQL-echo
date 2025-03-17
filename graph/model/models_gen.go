@@ -15,6 +15,14 @@ type Book struct {
 	Publisher []*Publisher `json:"Publisher"`
 }
 
+type Mutation struct {
+}
+
+type NewBook struct {
+	Name string    `json:"Name"`
+	Type *BookType `json:"Type,omitempty"`
+}
+
 type Publisher struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
