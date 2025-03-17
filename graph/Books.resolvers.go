@@ -6,14 +6,13 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"test-graphQL/graph/handler"
 	"test-graphQL/graph/model"
 )
 
 // CreateBook is the resolver for the createBook field.
 func (r *mutationResolver) CreateBook(ctx context.Context, req model.NewBook) (*model.Book, error) {
-	panic(fmt.Errorf("not implemented: CreateBook - createBook"))
+	return handler.CreateBook(&req), nil
 }
 
 // GetBooks is the resolver for the getBooks field.

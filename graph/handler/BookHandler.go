@@ -53,3 +53,23 @@ var books = []*model.Book {
 func GetBook() []*model.Book {
 	return books
 }
+
+func CreateBook(req *model.NewBook) *model.Book {
+	newBook := &model.Book{
+		ID: "005",
+		Name: req.Name,
+		Type: req.Type,
+		Publisher: []*model.Publisher{
+			{
+				ID: "002",
+				Name: "StoreA",
+			},
+			{
+				ID: "003",
+				Name: "CompanyB",
+			},
+		},
+	}
+	books = append(books, newBook)
+	return newBook
+}
